@@ -106,8 +106,8 @@ Slider.prototype.bindDOM = function() {
         self.startX = evt.touches[0].pageX;    //记录手指按下的坐标
         self.offsetX = 0;   //清除偏移量
 
-        /*/*事件对象*/
-        var target = evt.target;
+        /*事件对象*/
+        /*var target = evt.target;
         while(target.nodeName != 'LI' && target.nodeName != 'BODY'){
             target = target.parentNode;
         }
