@@ -107,18 +107,18 @@ Slider.prototype.bindDOM = function() {
         self.offsetX = 0;   //清除偏移量
 
         /*事件对象*/
-        var target = evt.target;
+        /*var target = evt.target;
         while(target.nodeName != 'LI' && target.nodeName != 'BODY'){
             target = target.parentNode;
         }
-        self.target = target;
+        self.target = target;*/
     };
 
     /*手指移动的处理事件*/
     var moveHandler = function(evt) {
         evt.preventDefault();   //兼容Chrome Android，阻止浏览器的默认行为
 
-        self.offsetX = evt.targetTouches[0].pageX - self.startX;    //计算手指的偏移量
+        self.offsetX = evt.touches[0].pageX - self.startX;    //计算手指的偏移量
         var lis = outer.getElementsByTagName('li');
         var i = self.idx - 1;   //起始索引
         var m = i + 3;  //结束索引
