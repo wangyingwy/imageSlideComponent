@@ -63,7 +63,7 @@ canvas部分（图片画布）设置为与屏幕等宽等高。
     记录开始位移startX：用touches属性（一个数组，包含手指触摸屏幕的点的集合），由于是单点触摸，所以我们只需要数组的第一项touches[0]，然后记录触摸点的坐标pageX，保存为变量startX
     设置offsetX为0，因为在后面的moveHandler中，根据位移，我们会改变offsetX的值，所以要在这里把它设置为0，避免在下一次触发移动的时候采用之前的offsetX的数据
     记录手指触摸的时间startTime
-    
+
     moveHandler：
     阻止浏览器的默认行为，因为不同的浏览器在touchmove事件的时候会触发不同的行为
     然后要记录offsetX的值（pageX与startX的差）
