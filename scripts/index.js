@@ -106,12 +106,12 @@ Slider.prototype.bindDOM = function() {
         self.startX = evt.touches[0].pageX;    //记录手指按下的坐标
         self.offsetX = 0;   //清除偏移量
 
-        /*事件对象*/
+        /*/*事件对象*/
         var target = evt.target;
         while(target.nodeName != 'LI' && target.nodeName != 'BODY'){
             target = target.parentNode;
         }
-        self.target = target;
+        self.target = target;*/
     };
 
     /*手指移动的处理事件*/
@@ -124,8 +124,8 @@ Slider.prototype.bindDOM = function() {
         var m = i + 3;  //结束索引
 
         for(i; i < m; i++){
-            lis[i] && (lis[i].style.webkitTransition = '-webkit-transform 0s ease-out');
             lis[i] && (lis[i].style.webkitTransform = 'translate3d('+ ((i-self.idx)*self.scaleW + self.offsetX) +'px, 0, 0)');
+            lis[i] && (lis[i].style.webkitTransition = 'none');
         };
     };
 
