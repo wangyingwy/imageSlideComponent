@@ -107,11 +107,11 @@ Slider.prototype.bindDOM = function() {
         self.offsetX = 0;   //清除偏移量
 
         /*事件对象*/
-        /*var target = evt.target;
+        var target = evt.target;
         while(target.nodeName != 'LI' && target.nodeName != 'BODY'){
             target = target.parentNode;
         }
-        self.target = target;*/
+        self.target = target;
     };
 
     /*手指移动的处理事件*/
