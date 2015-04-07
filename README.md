@@ -22,10 +22,12 @@
 &#160; &#160; &#160; &#160;首先新建图片数组，模拟后台返回的图片数据，数据中包含了图片的宽度，高度以及路径
 
 &#160; &#160; &#160; &#160;定义构造函数Slider，通过调用构造函数传入参数生成滑动组件：
+<pre>
         new Slider({
             dom : document.getElementById('canvas'),    //获得dom引用
             list : list     //传入图片数据
         });
+</pre>
 在Slider里面进行初始化（init），生成DOM（renderDOM），绑定DOM事件，进行交互（bindDOM）——构造三部曲
 
 >第一步：init()
