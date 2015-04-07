@@ -28,14 +28,14 @@
             list : list     //传入图片数据
         });
 </pre>
-在Slider里面进行初始化（init），生成DOM（renderDOM），绑定DOM事件，进行交互（bindDOM）——构造三部曲
+&#160; &#160; &#160; &#160;在Slider里面进行初始化（init），生成DOM（renderDOM），绑定DOM事件，进行交互（bindDOM）——构造三部曲
 
->第一步：init()
+1.第一步：init()
     定义radio算出窗口长宽比（window.innerHeight/window.innerWidth）；
     定义图片左右滚动一次的距离为屏幕的宽度（window.innerWidth）；
     定义索引值，初始值为0，表示当前图片位于整个图片列表的索引
 
->第二步：renderDOM()
+2.第二步：renderDOM()
 根据数据生成html：
     根据最外层的canvas生成节点，并保存为变量wrap，设置wrap的高度为窗口的高度
     根据list数据生成图片的数据
@@ -45,7 +45,7 @@
     图片列表项为等差数列，上一项与下一项的差值为窗口的宽度，所以我们可以设置transform的x轴的值为i*this.scaleW
     通过图片数据的宽高值来决定图片等比缩放的依据是宽还是高，所以就要算出图片的宽高比，并与radio（屏幕的宽高比进行比较）：假如图片宽高比大于radio，说明图片是“长条形”的，所以图片是水平居中的（左右会有空隙），所以图片的高度会等于屏幕的高度（根据高度缩放）；假如图片宽高比小于radio，说明图片是“扁平”的，所以图片垂直居中（上下有空隙），所以图片的宽度等于屏幕的宽度（根据宽度缩放）
 
->第三步：bindDOM()
+3.第三步：bindDOM()
     定义self变量，保存this指针。因为this指针在调用的过程中会漂移（即在不同函数中this的指向不同）
     定义scale，保存屏幕的宽度
     定义outer，保存最外层的dom节点
